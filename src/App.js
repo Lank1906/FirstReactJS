@@ -4,11 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Code to import Budget.js
 import Budget from './components/Budget';
-import Budget from './components/AllocationForm';
-import Budget from './components/ExpenseItem';
-import Budget from './components/ExpenseList';
-import Budget from './components/ExpenseTotal';
-import Budget from './components/Remaining';
+import AllocationForm from './components/AllocationForm';
+import ExpenseItem from './components/ExpenseItem';
+import ExpenseList from './components/ExpenseList';
+import ExpenseTotal from './components/ExpenseTotal';
+import Remaining from './components/Remaining';
 
 // Add code to import the other components here under
 
