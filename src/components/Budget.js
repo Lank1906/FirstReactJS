@@ -1,15 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
-const Remaining = () => {
-    const { expenses, budget } = useContext(AppContext);
-    const totalExpenses = expenses.reduce((total, item) => {
-        return (total = total + item.cost);
-    }, 0);
-    const alertType = totalExpenses > budget ? 'alert-danger' : 'alert-success';
+
+const Budget = () => {
+    const { budget } = useContext(AppContext);
+    const [newBudget, setNewBudget] = useState(budget);
+    const handleBudgetChange = (event) => {
+        setNewBudget(event.target.value);
+    }
     return (
-        <div className={`alert ${alertType}`}>
-            <span>Remaining: £{budget - totalExpenses}</span>
-        </div>
+<div className='alert alert-secondary'>
+<span>Budget: £{budget}</span>
+<input type="number" step="10" value={newBudget} onChange={handleBudgetChange}></input>
+</div>
     );
 };
-export default Remaining;
+export default Budget;
