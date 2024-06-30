@@ -4,6 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Code to import Budget.js
 import Budget from './components/Budget';
+import Budget from './components/AllocationForm';
+import Budget from './components/ExpenseItem';
+import Budget from './components/ExpenseList';
+import Budget from './components/ExpenseTotal';
+import Budget from './components/Remaining';
 
 // Add code to import the other components here under
 
@@ -17,26 +22,44 @@ const App = () => {
                     <div className='row mt-3'>
                         {
                             /* Add Budget component here */
+                             <div className='col-sm'>
+                        <Budget />
+                    </div>
                         }        
 
                         {
                             /* Add Remaining component here*/
+                             <div className='col-sm'>
+                        <Remaining />
+                    </div>
                         }        
 
                         {
                             /* Add ExpenseTotal component here */
+                             <div className='col-sm'>
+                        <ExpenseTotal />
+                    </div>
                         }        
                        
                         {
                             /* Add ExpenseList component here */
+                             <div className='col-sm'>
+                        <ExpenseList />
+                    </div>
                         }         
 
                         {
                             /* Add ExpenseItem component here */
+                             <div className='col-sm'>
+                        <ExpenseItem />
+                    </div>
                         }        
 
                         {
                             /* Add AllocationForm component here under */
+                             <div className='col-sm'>
+                        <AllocationForm />
+                    </div>
                         }        
 
                 </div>
